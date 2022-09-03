@@ -134,21 +134,21 @@ public static class Program
 
     public static void Sum(int a, int b)
     {
-        var result = a + b;
+        var result = checked(a + b);
         Console.WriteLine($"Ответ: {result}");
         if (result == 13) throw new Result13Exception();
     }
 
     public static void Sub(int a, int b)
     {
-        var result = a - b;
+        var result = checked(a - b);
         Console.WriteLine($"Ответ: {result}");
         if (result == 13) throw new Result13Exception();
     }
 
     public static void Mul(int a, int b)
     {
-        var result = a * b;
+        var result = checked(a * b);
         Console.WriteLine($"Ответ: {result}");
         if (result == 13) throw new Result13Exception();
     }
