@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.App", "ExceptionHandling.App\ExceptionHandling.App.csproj", "{852F4B0C-BB00-49EF-94E9-CF78C524B0ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionHandling.Tests", "ExceptionHandling.Tests\ExceptionHandling.Tests.csproj", "{DC72BBEB-59FB-4D31-87C8-AEE5B5974683}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{852F4B0C-BB00-49EF-94E9-CF78C524B0ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{852F4B0C-BB00-49EF-94E9-CF78C524B0ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{852F4B0C-BB00-49EF-94E9-CF78C524B0ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{852F4B0C-BB00-49EF-94E9-CF78C524B0ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC72BBEB-59FB-4D31-87C8-AEE5B5974683}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC72BBEB-59FB-4D31-87C8-AEE5B5974683}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC72BBEB-59FB-4D31-87C8-AEE5B5974683}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC72BBEB-59FB-4D31-87C8-AEE5B5974683}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
