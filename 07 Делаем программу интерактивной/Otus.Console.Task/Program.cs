@@ -8,10 +8,10 @@ namespace Otus.Console.Task
     {
         static void Main(string[] args)
         {
-            // Task1();
+            Task1();
             // Task2();
             // Task3();
-            Task4();
+            // Task4();
         }
 
 
@@ -37,7 +37,10 @@ namespace Otus.Console.Task
             do
             {
                 consoleKeyInfo = Console.ReadKey();
-                sb.Append(consoleKeyInfo.KeyChar);
+                if (consoleKeyInfo.Key != ConsoleKey.Enter)
+                {
+                    sb.Append(consoleKeyInfo.KeyChar);
+                }
             } while (consoleKeyInfo.Key != ConsoleKey.Enter);
 
             return sb.ToString();
@@ -77,10 +80,12 @@ namespace Otus.Console.Task
                 consoleKeyInfo = Console.ReadKey();
                 var top = Console.GetCursorPosition().Top;
                 var left = Console.GetCursorPosition().Left;
-                if (left <= 0 || top <= 0) continue;
-                Console.SetCursorPosition(left - 1, top - 1);
-                Console.Write(consoleKeyInfo.KeyChar.ToString().ToUpper());
-                Console.SetCursorPosition(left, top);
+                if (left > 0 && top > 0)
+                {
+                    Console.SetCursorPosition(left - 1, top - 1);
+                    Console.Write(char.ToUpper(consoleKeyInfo.KeyChar));
+                    Console.SetCursorPosition(left, top);
+                }
             } while (consoleKeyInfo.Key != ConsoleKey.Enter);
         }
 
