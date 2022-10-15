@@ -5,9 +5,6 @@ internal class Program
     public static void Main(string[] args)
     {
         var quadcopter = new Quadcopter();
-        IFlyingRobot flyingRobot = quadcopter;
-        IChargeable chargeable = quadcopter;
-        IRobot robot = quadcopter;
 
         Console.WriteLine("======== Quadcopter ========");
         quadcopter.Charge();
@@ -15,20 +12,20 @@ internal class Program
         Console.WriteLine();
 
         Console.WriteLine("======== IChargeable ========");
-        chargeable.Charge();
-        Console.WriteLine(chargeable.GetInfo());
+        ((IChargeable)quadcopter).Charge();
+        Console.WriteLine(((IChargeable)quadcopter).GetInfo());
         Console.WriteLine();
 
         Console.WriteLine("======== IFlyingRobot ========");
-        Console.WriteLine(flyingRobot.GetRobotType());
-        Console.WriteLine(string.Join(", ", flyingRobot.GetComponents().ToArray()));
-        Console.WriteLine(flyingRobot.GetInfo());
+        Console.WriteLine(((IFlyingRobot)quadcopter).GetRobotType());
+        Console.WriteLine(string.Join(", ", ((IFlyingRobot)quadcopter).GetComponents().ToArray()));
+        Console.WriteLine(((IFlyingRobot)quadcopter).GetInfo());
         Console.WriteLine();
 
         Console.WriteLine("======== IRobot ========");
-        Console.WriteLine(robot.GetRobotType());
-        Console.WriteLine(string.Join(", ", robot.GetComponents().ToArray()));
-        Console.WriteLine(robot.GetInfo());
+        Console.WriteLine(((IRobot)quadcopter).GetRobotType());
+        Console.WriteLine(string.Join(", ", ((IRobot)quadcopter).GetComponents().ToArray()));
+        Console.WriteLine(((IRobot)quadcopter).GetInfo());
         Console.WriteLine();
     }
 }
