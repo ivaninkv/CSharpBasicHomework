@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.App", "Trees.App\Trees.App.csproj", "{A0D48BE9-7277-4714-85BA-5C8AF7B6EEF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trees.Tests", "Trees.Tests\Trees.Tests.csproj", "{05CC5F7A-28D8-442F-9B5A-E14BF23898B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0D48BE9-7277-4714-85BA-5C8AF7B6EEF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0D48BE9-7277-4714-85BA-5C8AF7B6EEF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0D48BE9-7277-4714-85BA-5C8AF7B6EEF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0D48BE9-7277-4714-85BA-5C8AF7B6EEF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05CC5F7A-28D8-442F-9B5A-E14BF23898B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05CC5F7A-28D8-442F-9B5A-E14BF23898B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05CC5F7A-28D8-442F-9B5A-E14BF23898B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05CC5F7A-28D8-442F-9B5A-E14BF23898B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
