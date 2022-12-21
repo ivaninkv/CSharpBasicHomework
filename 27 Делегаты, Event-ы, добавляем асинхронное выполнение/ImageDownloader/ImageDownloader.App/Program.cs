@@ -8,8 +8,8 @@ public static class Program
     public static async Task Main(string[] args)
     {
         var imageDownloader = new ImageDownloader();
-        imageDownloader.ImageStarted += imageDownloader.OnImageStarted;
-        imageDownloader.ImageCompleted += imageDownloader.OnImageCompleted;
+        imageDownloader.ImageStarted += OnImageStarted;
+        imageDownloader.ImageCompleted += OnImageCompleted;
         var task = imageDownloader.Download(ImageUrl);
 
         while (!task.IsCompleted)
@@ -28,5 +28,15 @@ public static class Program
         }
 
         await task;
+    }
+
+    private static void OnImageStarted()
+    {
+        Console.WriteLine("Скачивание файла началось");
+    }
+
+    private static void OnImageCompleted()
+    {
+        Console.WriteLine("Скачивание файла закончилось");
     }
 }

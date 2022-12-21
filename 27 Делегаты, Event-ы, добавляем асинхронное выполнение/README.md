@@ -34,3 +34,25 @@ Console.WriteLine("Успешно скачал \"{0}\" из \"{1}\"", fileName, 
 * Для сдачи достаточно 7 баллов.
 
 Рекомендуем сдать до: 15.11.2022
+
+## Решение
+
+Вывод программы:
+```shell
+Качаю "bigimage.jpg" из "https://unsplash.com/photos/ChFD5fj6Rqc/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8YmlnfGVufDB8fHx8MTY3MTUyODI2NQ&force=true"...
+
+
+Скачивание файла началось
+Нажмите клавишу A для выхода или любую другую клавишу для проверки статуса скачивания
+q
+Картинка загружена: False
+Нажмите клавишу A для выхода или любую другую клавишу для проверки статуса скачивания
+Успешно скачал "bigimage.jpg" из "https://unsplash.com/photos/ChFD5fj6Rqc/download?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8YmlnfGVufDB8fHx8MTY3MTUyODI2NQ&force
+=true"
+Скачивание файла закончилось
+q
+Картинка загружена: True
+
+Process finished with exit code 0.
+
+```

@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using System.Net;
 
 namespace ImageDownloader.App;
@@ -11,20 +12,31 @@ public class ImageDownloader
     {
         var fileName = "bigimage.jpg";
         var webClient = new WebClient();
+
+        webClient.DownloadFileCompleted += OnDownloadFileCompleted(fileName, url);
         Console.WriteLine("Качаю \"{0}\" из \"{1}\"...\n", fileName, url);
         ImageStarted?.Invoke();
         await webClient.DownloadFileTaskAsync(url, fileName);
-        Console.WriteLine("Успешно скачал \"{0}\" из \"{1}\"", fileName, url);
-        ImageCompleted?.Invoke();
     }
 
-    public void OnImageStarted()
+    private AsyncCompletedEventHandler OnDownloadFileCompleted(string fileName, string url)
     {
-        Console.WriteLine("Скачивание файла началось");
-    }
-
-    public void OnImageCompleted()
-    {
-        Console.WriteLine("Скачивание файла закончилось");
+        Action<object, AsyncCompletedEventArgs> action = (_, e) =>
+        {
+            if (e.Cancelled)
+            {
+                Console.WriteLine("Загрузка файла отменена.");
+            }
+            else if (e.Error != null)
+            {
+                throw e.Error;
+            }
+            else
+            {
+                Console.WriteLine("Успешно скачал \"{0}\" из \"{1}\"", fileName, url);
+                ImageCompleted?.Invoke();
+            }
+        };
+        return new AsyncCompletedEventHandler(action);
     }
 }
