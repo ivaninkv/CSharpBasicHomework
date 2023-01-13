@@ -9,14 +9,15 @@ public static class Program
 
         customer.Subscribe(shop);
 
+        Console.WriteLine("Управляющие команды:");
+        Console.WriteLine("A - добавить товар");
+        Console.WriteLine("D - удалить товар");
+        Console.WriteLine("X - выйти из программы");
+
         while (true)
         {
-            Console.WriteLine("Управляющие команды:");
-            Console.WriteLine("A - добавить товар");
-            Console.WriteLine("D - удалить товар");
-            Console.WriteLine("X - выйти из программы");
-
             var key = Console.ReadKey();
+            Console.WriteLine();
             switch (key.Key)
             {
                 case ConsoleKey.A:
