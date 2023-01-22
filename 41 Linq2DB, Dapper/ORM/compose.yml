@@ -1,0 +1,25 @@
+version: "3"
+services:
+  app:
+    build:
+      context: ORM.App/
+    environment:
+      CONNECTION_STRING: "User ID=postgres;Password=password;Host=postgres;Port=5432;Database=Shop;"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  postgres:
+    image: postgres:15.1-bullseye
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready", "-d", "Shop" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    environment:
+      POSTGRES_DB: Shop
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    volumes:
+      - ./psql-init:/docker-entrypoint-initdb.d
